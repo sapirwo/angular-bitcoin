@@ -1,0 +1,23 @@
+<section>
+    <main class="details-container main-container">
+        <div class="details-content main-content">
+            <div *ngIf="contact$">
+                <div class="transfer-section flex column align-center">
+                    <div class="btn-section flex space-between">
+                        <button (click)="goBack()">Back</button>
+                        <button><a routerLink="/contact/edit/{{contact$.id}}">Edit</a></button>
+                    </div>
+                    <img [src]="contact$.img" alt="contact">
+                    <h1>{{contact$.name}}</h1>
+                    <h2>{{contact$.phone}}</h2>
+                    <h3>{{contact$.email}}</h3>
+                    <div class="transfer-input-section flex">
+                        <input type="number" min="1" placeholder="USD Sum..." [(ngModel)]="transferSum">
+                        <button (click)="onTransfer()">Transfer</button>
+                    </div>
+                </div>
+                <last-moves-contact [contact$]="contact$" [loggedInUser$]="loggedInUser$"></last-moves-contact>
+            </div>
+        </div>
+    </main>
+</section>

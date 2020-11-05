@@ -1,0 +1,62 @@
+.moves-history {
+  padding: 10px 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(150, 150, 150, 0.119);
+  border-radius: 5px;
+
+  h5 {
+    color: rgb(203, 196, 196);
+    font-size: 1.7rem;
+  }
+
+  .move-list {
+    text-align: left;
+    padding-bottom: 10px;
+  }
+}
+
+.move-preview {
+  background-color: rgba(0, 0, 0, 0.262);
+  padding: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.379);
+    transition: 0.7s;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .transfer-money {
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    .bitcoin-rate {
+      color: rgba(80, 154, 80, 0.851);
+    }
+
+    .transfer-sum {
+      color: rgba(154, 154, 154, 0.516);
+    }
+  }
+
+  .transfer-status {
+    color: rgba(255, 255, 255, 0.44);
+
+    .status-title {
+      margin-right: 23px;
+    }
+  }
+
+  .transfer-timestamp {
+    color: rgba(255, 255, 255, 0.44);
+  }
+}

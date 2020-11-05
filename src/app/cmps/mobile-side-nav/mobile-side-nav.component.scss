@@ -1,0 +1,64 @@
+.side-nav-container {
+  width: 35px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.side-nav-content {
+  background-color: inherit;
+}
+
+.side-nav {
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  padding: 50px 20px 0;
+  background-color: rgba(0, 0, 0, 0.87);
+
+  button:not(.nav-link) {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: inherit;
+    border: none;
+    color: white;
+  }
+
+  .nav-link {
+    border: none;
+    border-bottom: 1px rgba(128, 128, 128, 0.413) solid;
+    background-color: inherit;
+    color: rgb(172, 172, 172);
+    font-size: 1.7rem;
+    width: 90%;
+    text-align: left;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .active-nav {
+    button {
+      color: white;
+      cursor: auto;
+    }
+  }
+}
+
+.mobile-humburger {
+  button {
+    background-color: inherit;
+    border: none;
+    color: rgba(201, 201, 201, 0.849);
+  }
+}
+
+
+// *-------Mobile Humburder--------*//
+@media screen and (min-width: 500px) {
+  .side-nav-container {
+    display: none;
+  }
+}

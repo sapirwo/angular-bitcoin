@@ -1,0 +1,15 @@
+<div class="contact-preview">
+    <div class="inner-content flex align-center">
+        <div class="contact-prev-left-sec">
+            <a routerLink='/contact/{{contact.id}}'>
+                <img [src]="contact.img" alt="contact">
+            </a>
+        </div>
+        <div class="contact-prev-rigth-sec">
+            <a routerLink='/contact/{{contact.id}}'>
+                <p>{{contact.name}}</p>
+                <p>{{contact.phone}}</p>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<section (window:resize)="onResize($event)">
+    <div class="chart-container flex justify-center" *ngIf="chart.data">
+        <google-chart class="google-chart" [title]="chart.title" [type]="chart.type" [data]="chart.data"
+            [columns]="chartColumns" [options]="chartOptions">
+        </google-chart>
+    </div>
+</section>

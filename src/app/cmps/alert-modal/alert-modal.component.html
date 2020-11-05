@@ -1,0 +1,18 @@
+<section class="alert-overlay flex justify-center align-center" [hidden]="!visible" title="overlay">
+    <div class="alert-container">
+        <div class="alert-content">
+            <h1>Are you sure?</h1>
+            <div class="btn-section">
+                <button name="true" (click)="toggle(true)">Yes
+                    <span class="material-icons">
+                        verified_user
+                    </span></button>
+                <button name="false" (click)="toggle(false)">Discard
+                    <span class="material-icons">
+                        cancel
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

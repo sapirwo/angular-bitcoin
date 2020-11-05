@@ -1,0 +1,20 @@
+<section>
+    <div class="moves-history">
+        <h5>Moves History</h5>
+        <div class="move-list" *ngIf="getMovesToShow()">
+            <div class="move-preview" *ngFor="let move of getMovesToShow()">
+                <p class="transfer-money">
+                    <span class="bitcoin-rate">Ƀ{{move.currRate|number}} | </span>
+                    <span class="transfer-sum">
+                        ${{move.sum|number}}</span></p>
+                <p class="transfer-status">
+                    <span class="status-title">Status </span>
+                    <span class="transfer-the-status">| {{move.status}}</span>
+                </p>
+                <p class="transfer-timestamp">
+                    <span class="transfer-date">{{move.timeStamp|date}} </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,54 @@
+.nav-container {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.166);
+  width: 100%;
+  padding: 10px;
+}
+
+.main-nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: none;
+
+  a {
+    text-decoration: none;
+    color: rgb(172, 172, 172);
+    font-size: 1.3rem;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    span {
+      vertical-align: bottom;
+    }
+  }
+
+  .active-nav {
+    color: white;
+    cursor: auto;
+  }
+}
+
+img {
+  max-width: 30px;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 80%;
+  }
+}
+
+// *-------Mobile Humburder--------*//
+@media screen and (min-width: 500px) {
+  .main-nav {
+    display: block;
+  }
+}

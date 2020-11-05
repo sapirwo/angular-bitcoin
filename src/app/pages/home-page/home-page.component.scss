@@ -1,0 +1,56 @@
+.home-content {
+  color: white;
+  text-align: left;
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px rgba(128, 128, 128, 0.365) solid;
+  text-align: center;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: rgba(154, 154, 154, 0.529);
+}
+
+.user-balance {
+  border-bottom: 1px rgba(128, 128, 128, 0.365) solid;
+}
+
+.user-balance-left-section {
+  padding: 0 10px;
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .user-btc {
+    color: rgba(80, 154, 80, 0.851);
+    font-weight: 800;
+  }
+}
+
+.user-balance-right-section {
+  padding: 0 10px;
+
+  h4 {
+    text-align: center;
+
+    span {
+      background-color: rgba(154, 85, 80, 0.851);
+      border-radius: 5px;
+      padding: 0 4px;
+      color: rgba(0, 0, 0, 0.543);
+      text-transform: initial;
+    }
+  }
+
+  p {
+    font-size: 2.2rem;
+    margin: 0;
+    text-align: center;
+  }
+}

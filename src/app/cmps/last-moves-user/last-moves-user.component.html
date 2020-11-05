@@ -1,0 +1,32 @@
+<div class="moves-history" *ngIf="user$">
+    <div class="flex space-between align-center t-head">
+        <h5>Last moves</h5>
+        <mat-select class="sort-selector" [(ngModel)]="sortBy">
+            <mat-option value="date">Date</mat-option>
+            <mat-option value="sum">Sum</mat-option>
+        </mat-select>
+    </div>
+    <div class="move-list" *ngIf="user$.moves">
+        <div class="move-preview-container" *ngFor="let move of getSortedMoves()">
+            <a routerLink="/contact/{{move.toContact.id}}">
+                <div class="move-preview-content flex space-between">
+                    <div>
+                        <p class="transfer-money">
+                            <span class="bitcoin-rate">Ƀ{{move.currRate|number}} | </span>
+                            <span class="transfer-sum"> ${{move.sum|number}}</span>
+                        </p>
+                        <p class="transfer-status">
+                            <span class="status-title">Status </span>
+                            <span class="transfer-the-status">| {{move.status}}</span>
+                        </p>
+                        <p class="transfer-timestamp">
+                            <span class="transfer-date">{{move.timeStamp|date}} </span>
+                        </p>
+                        <p class="transfer-to"><span>to</span> {{move.toContact.name}}</p>
+                    </div>
+                    <img [src]="move.toContact.img" alt="contact">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

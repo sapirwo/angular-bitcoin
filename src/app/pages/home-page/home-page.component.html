@@ -1,0 +1,22 @@
+<section>
+    <main class="home-conatainer main-container">
+        <div class="home-content main-content" *ngIf="user$">
+            <header>
+                <h1>Hi {{user$.name}}!</h1>
+            </header>
+            <div class="user-balance flex space-between">
+                <div class="user-balance-left-section">
+                    <h4>Current Balance</h4>
+                    <p>BIT: <span class="user-btc">Ƀ{{user$.coins|number: '1.0-0'}}</span></p>
+                    <p>USD: <span>${{user$.usd|number: '1.0-0'}}</span></p>
+                </div>
+                <div class="user-balance-right-section">
+                    <h4>Current BTC USD <span>live</span></h4>
+                    <p *ngIf="btcRate">${{user$.coins*btcRate||0|number: '1.0-0'}}</p>
+                </div>
+            </div>
+        </div>
+        <exchange-chart></exchange-chart>
+        <last-moves-user [user$]="user$"></last-moves-user>
+    </main>
+</section>

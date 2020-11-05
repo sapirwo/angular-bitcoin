@@ -1,0 +1,18 @@
+<section>
+    <main class="contact-add-container main-container">
+        <div class="contact-add-content main-content flex column align-center">
+            <h1>Add new</h1>
+        <img [src]="newContact.img" alt="new contact">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" [(ngModel)]="newContact.name" type="text">
+            <label for="contact-phone">Phone</label>
+            <input id="contact-phone" [(ngModel)]="newContact.phone" type="text">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" [(ngModel)]="newContact.email" type="text">
+            <div class="btn-section flex space-between">
+                <button type="submit" (click)="onSubmit()">Save</button>
+                <button (click)="goBack()">Cancel</button>
+            </div>
+        </div>
+    </main>
+</section>

@@ -1,0 +1,28 @@
+<section>
+    <main class="edit-container main-container">
+        <alert-modal *ngIf="isOpenAlert" (close)="onCloseAlert($event)"></alert-modal>
+        <div class="contact-edit-content main-content">
+            <div *ngIf="contact$">
+                <div class="btn-remove-container">
+                    <button class="btn-remove material-icons" (click)="onToggleAlert()">
+                        <span class="material-icons" title="Delete from contacts">delete</span>
+                    </button>
+                </div>
+                <h1>Edit Contact</h1>
+                <div class="contact-edit-preview flex column align-center">
+                    <img [src]="contact$.img" alt="contact">
+                    <label>Name</label>
+                    <input [(ngModel)]="contact$.name" placeholder="Name..." />
+                    <label>Phone</label>
+                    <input [(ngModel)]="contact$.phone" placeholder="Phone..." />
+                    <label>Email</label>
+                    <input [(ngModel)]="contact$.email" placeholder="Email..." />
+                </div>
+                <div class="btn-section">
+                    <button (click)="save()">Save</button>
+                    <button (click)="goBack()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>

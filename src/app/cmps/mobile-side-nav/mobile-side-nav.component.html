@@ -1,0 +1,32 @@
+<nav class="side-nav-container">
+    <mat-drawer-container autosize class="side-nav-content">
+        <mat-drawer #drawer class="side-nav" mode="side">
+            <div class="nav-links flex column">
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    <span class="material-icons">menu</span>
+                </button>
+                <a routerLinkActive="active-nav" routerLink="/home">
+                    <button class="nav-link" type="button" mat-button (click)="drawer.toggle()">
+                        <span class="material-icons">
+                            home
+                        </span>
+                        Home
+                    </button>
+                </a>
+                <a routerLinkActive="active-nav" routerLink="/contact">
+                    <button class="nav-link" mat-button (click)="drawer.toggle()">
+                        <span class="material-icons">
+                            group
+                        </span>
+                        Contacts
+                    </button>
+                </a>
+            </div>
+        </mat-drawer>
+        <div class=" mobile-humburger">
+            <button class="btn-mobile-humburger" type="button" mat-button (click)="drawer.toggle()">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+    </mat-drawer-container>
+</nav>
