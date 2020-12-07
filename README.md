@@ -1,4 +1,4 @@
-# BitApp!
+# BitApp
 `Bitcoin Wallet`
 * WPA using Angular.js (TypeScript, RxJS).
 * Providing real-time Info with Blockchain API.
